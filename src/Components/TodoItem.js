@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteTodo } from "../Store/Actions";
+import { AiFillDelete } from "react-icons/ai";
 function TodoItem({ todo }) {
   const dispatch = useDispatch();
   return (
@@ -11,13 +12,13 @@ function TodoItem({ todo }) {
           {" "}
           <h4>{todo.name}</h4>
         </div>
-        <button className="btn btn-primary m-4"> edit</button>
+
         <button
           onClick={() => dispatch(deleteTodo(todo.id))}
           className="btn btn-primary m-4"
         >
           {" "}
-          Delete
+          <AiFillDelete />
         </button>
       </div>
     </div>
