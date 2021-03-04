@@ -1,16 +1,18 @@
 import React from "react";
 
-export default function TodoItem() {
+function TodoItem({ todo }) {
   return (
     <div>
       <div className="row mx-2 align-items-center">
-        <div>1</div>
+        <div>{todo.id}</div>
         <div className="col">
           {" "}
-          <h4>todo title</h4>
+          <h4>{todo.name}</h4>
         </div>
-        <button> Delete</button>
+        <button className="btn btn-primary m-4"> edit</button>
+        <button className="btn btn-primary m-4"> Delete</button>
       </div>
     </div>
   );
 }
+export default TodoItem;
